@@ -1,0 +1,8 @@
+DATA CLEANING QUALITY REPORT
+----------------------------
+Original Records: 12
+Cleaned Records: 9
+Rejected Records: 2
+Duplicates Removed: 1
+Missing Values Before: 3
+Missing Values After: 0
