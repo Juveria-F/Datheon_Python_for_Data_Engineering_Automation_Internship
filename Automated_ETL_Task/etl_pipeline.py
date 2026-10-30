@@ -1,12 +1,9 @@
-
+```python
 import pandas as pd
 import sqlite3
 import logging
 import schedule
 import time
-import smtplib
-import os
-from email.message import EmailMessage
 from datetime import datetime
 
 # Logging configuration
@@ -89,7 +86,7 @@ def run_pipeline():
 
         logging.info("Data loaded into database successfully")
 
-        # 4. GENERATE SUMMARY
+        # 4. GENERATE SUMMARY REPORT
         report = f"""
 ETL PIPELINE SUMMARY
 --------------------
@@ -105,29 +102,7 @@ Status: SUCCESS
         with open("etl_report.txt", "w") as file:
             file.write(report)
 
-        # 5. SEND EMAIL (OPTIONAL)
-        sender = os.getenv("ETL_EMAIL")
-        password = os.getenv("ETL_APP_PASSWORD")
-        receiver = os.getenv("ETL_RECEIVER")
-
-        if sender and password and receiver:
-
-            message = EmailMessage()
-            message["Subject"] = "ETL Pipeline Report"
-            message["From"] = sender
-            message["To"] = receiver
-            message.set_content(report)
-
-            with smtplib.SMTP_SSL(
-                "smtp.gmail.com", 465
-            ) as server:
-                server.login(sender, password)
-                server.send_message(message)
-
-            print("Email report sent successfully!")
-
-        else:
-            print("Email skipped: Email settings not configured.")
+        print("Report saved successfully as etl_report.txt")
 
         logging.info("ETL pipeline completed successfully")
 
@@ -149,3 +124,4 @@ print("Press Ctrl+C to stop.")
 while True:
     schedule.run_pending()
     time.sleep(1)
+```
