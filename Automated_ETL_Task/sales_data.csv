@@ -1,0 +1,12 @@
+
+Order_ID,Customer,Product,Amount,Quantity
+101,Alice,Laptop,50000,1
+102,Bob,Mobile,20000,2
+103,Charlie,Keyboard,1500,1
+104,David,Mouse,800,3
+105,Eva,Monitor,12000,1
+106,Frank,Tablet,15000,2
+107,Grace,Headphones,2500,1
+108,Henry,Printer,8000,1
+109,Ivy,Speaker,3000,2
+110,Jack,Mouse,900,1

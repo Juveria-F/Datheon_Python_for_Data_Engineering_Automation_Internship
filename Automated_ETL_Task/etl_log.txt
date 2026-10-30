@@ -1,0 +1,4 @@
+2026-10-30 15:22:43,838 - INFO - Data extracted successfully
+2026-10-30 15:22:43,848 - INFO - Data transformed successfully
+2026-10-30 15:22:43,872 - INFO - Data loaded into database successfully
+2026-10-30 15:22:43,874 - INFO - ETL pipeline completed successfully
